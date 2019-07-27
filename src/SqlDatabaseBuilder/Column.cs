@@ -8,6 +8,8 @@
 
         public Default Default { get; set; }
 
+        public Identity Identity { get; set; }
+
 
 
         public Column(string name, DataType dataType) : base(name)
@@ -20,8 +22,9 @@
             get
             {
                 string defaultDefinition = Default == null ? "" : Default.SqlDefinition;
+                string identityDefinition = Identity == null ? "" : Identity.SqlDefinition;
                 string nullDefinition = Nullable ? "" : " NOT NULL";
-                return $"[{Name}] {DataType.Definition}{defaultDefinition}{nullDefinition}";
+                return $"[{Name}] {DataType.Definition}{defaultDefinition}{identityDefinition}{nullDefinition}";
             }
         }
     }

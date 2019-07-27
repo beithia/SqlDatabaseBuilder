@@ -28,6 +28,18 @@ namespace Xtrimmer.SqlDatabaseBuilderTests.Manual
             }
         }
 
+
+
+        //check not null seed and not null increment *
+        //check identity with default seed and default increment
+        //check null seed and not null increment *
+        //check null increment not null seed *
+        //check null seed and null increment *
+        //check identity on allowable data types
+        //check identity on non-allowable data types
+        //check identity with defined default contraint
+
+
         [Fact]
         public void AddDefaultConstraintWithoutName()
         {
